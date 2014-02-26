@@ -9,10 +9,11 @@ ____________________________________________________________Download ZIP >  >
 Requirements
 1. Native S/L/E/AppleHDA.kext (restore native AppleHDA.kext with Combo Update)
 2. Supported OS X versions:
-2a. alc889-91 - Mavericks 10.9.1/AppleHDA.kext_v2.5.3
-2a. alc889-90 - Mavericks 10.9/AppleHDA.kext_v2.5.2
-2b. alc889-85 - Mountain Lion 10.8.5/AppleHDA.kext_v2.4.7
-2c. alc889-84 - Mountain Lion 10.8 - 10.8.4/AppleHDA.kext_v2.3.7
+2a. alc889-92 - Mavericks 10.9.2AppleHDA.kext_v2.6.0
+2b. alc889-91 - Mavericks 10.9.1/AppleHDA.kext_v2.5.3
+2c. alc889-90 - Mavericks 10.9/AppleHDA.kext_v2.5.2
+2d. alc889-85 - Mountain Lion 10.8.5/AppleHDA.kext_v2.4.7
+2e. alc889-84 - Mountain Lion 10.8 - 10.8.4/AppleHDA.kext_v2.3.7
 
 Realtek ALC AppleHDA Guides https://github.com/toleda/audio_ALCInjection
 1. M-Realtek ALC AppleHDA Capabilities.pdf
@@ -56,6 +57,7 @@ Download
 
 Installation/Shell Script/.command
 1. Downloads/audio_ALC889-master/
+1a. for 10.9.2/audio_alc889-92_patch.command
 1a. for 10.9.1/audio_alc889-91_patch.command
 1b. for 10.9/audio_alc889-90_patch.command
 1c. for 10.8.5/audio_alc889-85_patch.command
@@ -84,10 +86,11 @@ THe KiNG
 VHC888
 .:ErmaC:.
 bcc9
-RevoGirl
+RevoGirl rip
 
 toleda
 https://github.com/toleda/audio_ALC889
+audio_alc889-92_patch.command
 audio_alc889-91_patch.command
 audio_alc889-90_patch.command
 audio_alc889-85_patch.command
