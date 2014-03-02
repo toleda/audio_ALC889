@@ -6,10 +6,12 @@ OS X Realtek ALC889 Onboard Audio
 This guide enables OS X Realtek ALC889 onboard audio on Intel based motherboards with a bootable clean install of OS X. The Realtek AppleHDA.kext only works with the codec the kext was edited for and patches the native AppleHDA.kext.
 ____________________________________________________________Download ZIP >  > 
 
+Note: cloverALC, see https://github.com/toleda/audio_cloverALC
+
 Requirements
 1. Native S/L/E/AppleHDA.kext (restore native AppleHDA.kext with Combo Update)
 2. Supported OS X versions:
-2a. alc889-92 - Mavericks 10.9.2AppleHDA.kext_v2.6.0
+2a. alc889-92 - Mavericks 10.9.2/AppleHDA.kext_v2.6.0
 2b. alc889-91 - Mavericks 10.9.1/AppleHDA.kext_v2.5.3
 2c. alc889-90 - Mavericks 10.9/AppleHDA.kext_v2.5.2
 2d. alc889-85 - Mountain Lion 10.8.5/AppleHDA.kext_v2.4.7
@@ -29,7 +31,7 @@ Three Realtek ALC889 AppleHDA.kext Audio_IDs, select one
 4. Audio_IDs: 1 and 2 support analog 5.1 surround sound, 3 does not
 5. Audio_IDs: 1, 2 and 3 require HDMI audio dsdt edits for HDMI audio  
 
-Four techniques enable the Realtek ALC AppleHDA.kext, select one
+Techniques to enable the Realtek ALC AppleHDA.kext, select one
 1. HDEF/kext/No dsdt/audio enabler = Audio_ID, see [Guide] Add HDEF-kext.pdf
 https://github.com/toleda/audio_kext_enabler
 1a. Audio_ID = 1/HDAEnabler1.kext.zip 
@@ -50,12 +52,15 @@ https://github.com/toleda/audio_ALCInjection
 4a. Audio_ID = 1/Audio/Inject=1
 4b. Audio_ID = 2/Audio/Inject=2
 4c. Audio_ID = 3/Audio/Inject=3
+5. Chameleon/Chameleon Installer/Customize/Settings
+5a. Audio_ID = 1/HDEF Layout=1
+5b. Audio_ID = 2/HDEF Layout=2
 
 Download
 1. https://github.com/toleda/audio_ALC889
 2. Select: Download ZIP (above and right)
 
-Installation/Shell Script/.command
+Installation/Shell Script/.command (Do not move folder or files)
 1. Downloads/audio_ALC889-master/
 1a. for 10.9.2/audio_alc889-92_patch.command
 1a. for 10.9.1/audio_alc889-91_patch.command
@@ -117,16 +122,7 @@ Details - audio_ALC889-ver_patch script  (see Requirements)
 _____________________________
 
 ...$ /Users/dtottle/Downloads/audio_ALC889-master/audio_alc889-85_patch.command ; exit;
-Prepare Desktop/audio_ALC889 ...
-Archive:  889.zip
-   creating: 889/
-  inflating: 889/Info-84.plist       
-  inflating: 889/Info-85.plist
-  inflating: 889/Info-90.plist     
- extracting: 889/layout1.xml.zlib    
- extracting: 889/layout2.xml.zlib    
- extracting: 889/layout3.xml.zlib    
-  inflating: 889/Platforms.xml.zlib  
+Prepare Desktop/audio_ALC889 ... 
 Install files ...
 Password:
 Patch binary ...

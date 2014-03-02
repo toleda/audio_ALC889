@@ -11,19 +11,25 @@
 # 3. Verify Downloads/audio_ALC889-master present
 #
 # Installation
-# 1. Finder/File/Open With/Terminal
-# 2. Enter password at prompt
+# 1. Downloads/audio_ALC889-master/audio_alc889-92_patch.command
+# 2. Double click audio_alc889-92_patch.command
+# 3. Enter password at prompt
 #
-# Agreement
-# The audio_ALC889_patch is for personal use only.  Do not distribute the patch, any or 
-# all of the enclosed files or the resulting patched AppleHDA.kext for any reason without # permission. The audio_ALC889_patch is provided as is and without any kind of warranty.
+echo " "
+echo "Agreement"
+echo "The audio_ALC889_patch is for personal use only. Do not distribute the patch," 
+echo "any or all of the enclosed files or the resulting patched AppleHDA.kext for any" 
+echo "reason without permission. The audio_ALC889_patch is provided as is and without" 
+echo "any kind of warranty."
+echo " "
 #
 echo "Prepare Desktop/audio_ALC889 ..."
 cd ~
+rm -rf Desktop/audio_ALC889
 cp -R Downloads/audio_ALC889-master Desktop/audio_ALC889
 cp -R /System/Library/Extensions/AppleHDA.kext Desktop/audio_ALC889/AppleHDA-orig.kext
 cd Desktop/audio_ALC889
-unzip 889.zip
+unzip -q 889.zip
 cd 889
 
 echo "Install files ..."
@@ -39,7 +45,6 @@ echo "Fix permissions ..."
 sudo chown -R root:wheel /System/Library/Extensions/AppleHDA.kext
 
 echo "Kernel cache..."
-sudo rm -fr /System/Library/Caches/*
 sudo touch /System/Library/Extensions
 
 cd ~
